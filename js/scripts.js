@@ -1,5 +1,4 @@
 // Business Logic
-
 function returnRange(input){
   let range = [];
   number = 0;
@@ -29,7 +28,7 @@ function changeThree(range) {
     let hasThree = false    
     for (const digit of number.toString()) {
       if (digit === "3") {
-        console.log("THREE!")
+        //console.log("THREE!")
         hasThree = true                    
       }
     }
@@ -48,7 +47,7 @@ function changeTwo(range) {
     let hasThree = false    
     for (const digit of number.toString()) {
       if (digit === "2") {
-        console.log("TWO!")
+        //console.log("TWO!")
         hasThree = true                    
       }
     }
@@ -67,7 +66,7 @@ function changeOne(range) {
     let hasThree = false    
     for (const digit of number.toString()) {
       if (digit === "1") {
-        console.log("ONE!")
+        //console.log("ONE!")
         hasThree = true                    
       }
     }
@@ -79,22 +78,17 @@ function changeOne(range) {
   });
   return newRange
 }
-
-
-
-
-
-
-
-
-
 //console.log(parseInt("test"))
-console.log(numberCheck("20"))
-console.log(changeThree(returnRange("23")))
-
-
-
-
-
+//console.log(numberCheck("20"))
+//console.log(changeThree(returnRange("23")))
 
 // Interface Logic 
+$(document).ready(function() {  
+  $("#mainForm").submit(function(event) {
+    event.preventDefault(event);
+    let userInput = $("#input").val();
+    console.log(userInput)
+    console.log(changeThree(returnRange(userInput)))
+    $("#output").text(changeThree(returnRange(userInput)))
+  });
+});
