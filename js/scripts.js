@@ -31,13 +31,13 @@ function changeThree(range) {
 function changeTwo(range) {  
   newRange = []
   range.forEach(function(number) {
-    let hasThree = false    
+    let hasTwo = false    
     for (const digit of number.toString()) {
       if (digit === "2") {        
-        hasThree = true                    
+        hasTwo = true                    
       }
     }
-    if (hasThree) {
+    if (hasTwo) {
       newRange.push("Boop!")
     } else {
       newRange.push(number)
@@ -49,14 +49,32 @@ function changeTwo(range) {
 function changeOne(range) {  
   newRange = []
   range.forEach(function(number) {
-    let hasThree = false    
+    let hasOne = false    
     for (const digit of number.toString()) {
       if (digit === "1") {        
-        hasThree = true                    
+        hasOne = true                    
       }
     }
-    if (hasThree) {
+    if (hasOne) {
       newRange.push("Beep!")
+    } else {
+      newRange.push(number)
+    }
+  });
+  return newRange
+}
+
+function changeFour(range) {  
+  newRange = []
+  range.forEach(function(number) {
+    let hasFour = false    
+    for (const digit of number.toString()) {
+      if (digit === "4") {        
+        hasFour = true                    
+      }
+    }
+    if (hasFour) {
+      newRange.push("BLEEEEEP!")
     } else {
       newRange.push(number)
     }
@@ -88,18 +106,30 @@ $(document).ready(function() {
               
           } 
         });
-        console.log(bleeper)    
-        main(userInput,reverse);  
+        //console.log(bleeper)    
+        main(userInput,reverse,bleeper);  
      }    
   });
 
-  function main(input,reverse) {
-    let mainRange = changeThree(returnRange(input))    
-    console.log(reverse)
-    if (reverse) {
-      mainRange.reverse();
+  function main(input,reverse,bleeper) {
+    let mainRange = returnRange(input)
+    if (bleeper) {
+      finalRange = changeThree(changeFour(mainRange))
+    } else {
+      finalRange = changeThree(mainRange)
     }
-    $("#output").append('"'+mainRange.join(" ")+'"')
+
+
+
+    //let mainRange = changeThree(returnRange(input))    
+    //console.log(reverse)
+
+
+
+    if (reverse) {
+      finalRange.reverse();
+    }
+    $("#output").append('"'+finalRange.join(" ")+'"')
   }
 
   $("#tryAgain").click(function() {

@@ -97,6 +97,15 @@ h1 {
   width: 50%;
   background-color: black;
 }
-.form-control {
-  width: 50%;
+.form-control { 
+  margin-top: 6px;
+  height: 70%; 
+  width: 40%;
+}
+
+label {
+  margin-right: 0px;
+  font-size: large;
+  font-weight: 500;
+  margin-top: 8px;
 }
