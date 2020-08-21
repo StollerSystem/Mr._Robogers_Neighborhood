@@ -1,7 +1,7 @@
 body {
   background: rgb(110, 103, 0);
   background: radial-gradient(circle, rgb(177, 115, 0) 21%, rgba(0,0,0,1) 83%); 
-  color: white;
+  color: rgb(214, 214, 214);
   font-family: OCR A Std, monospace;
 }
 
@@ -14,7 +14,7 @@ h1 {
   box-shadow: 2px 2px 5px 5px rgb(245, 11, 128);
   font-size: 50px;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 10px;
   padding-bottom: 20px;
   background-color: black;
@@ -24,6 +24,7 @@ h1 {
   padding: 20px;
   text-align: center;
   font-size: 25px;
+  text-shadow: 2px 2px  rgb(245, 11, 128);
 }
 
 #mainForm label {

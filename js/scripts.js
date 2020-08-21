@@ -10,16 +10,6 @@ function returnRange(input){
   return changeThree(range)
 }
 
-function numberCheck(input){  
-  if (input.split(" ").length > 1) {
-    alert("PLease enter a SINGLE number")    
-   } else if (Number.isNaN(parseInt(input))) {
-     alert("Please enter a NUMBER!")
-   } else {     
-     return returnRange(input)
-   }
-}
-
 function changeThree(range) {  
   newRange = []
   range.forEach(function(number) {
@@ -81,13 +71,12 @@ $(document).ready(function() {
     let userInput = $("#input").val();
     let reverse = false 
     if (userInput.split(" ").length > 1) {
-      alert("PLease enter a SINGLE number")    
+      alert("ERROR! PLease enter a SINGLE number")    
      } else if (Number.isNaN(parseInt(userInput))) {
-       alert("Please enter a NUMBER!")
+       alert("ERROR! Please enter a NUMBER!")
      } else {
         $("#send").hide();
-        $("#tryAgain").show(4000);
-                
+        $("#tryAgain").show(6000);                
         $("#display").show(2000,"swing");
         $("#inputZone").hide();       
         $("input:checkbox[name=options]:checked").each(function() {
@@ -98,8 +87,6 @@ $(document).ready(function() {
         main(userInput,reverse);  
      }    
   });
-
-
 
   function main(input,reverse) {
     let mainRange = changeThree(returnRange(input))    

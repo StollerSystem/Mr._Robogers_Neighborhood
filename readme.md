@@ -6,7 +6,7 @@
 
 ### Link to GitHub Pages:
 
-https://StollerSystem.github.io/Mr.-Roboger-s-Neighborhood
+https://StollerSystem.github.io/Mr._Robogers_Neighborhood
 
 ## Description
 
@@ -44,13 +44,13 @@ This webpage will take input from teh user in the form of a number, then countin
 
 * [X] A user should be able to enter a new number and see new results over and over again
 
-* [] Add an option reverse the outputt
+* [X] Add an option reverse the outputt
 
 ## Setup/Installation Requirements
 
 * If you would like to download this project you will need Git installed and VSCode or a text editor of your choice
-* Use your terminal to "git clone" from https://github.com/StollerSystem/Programming_Language_Suggester 
-* Navigate to the Pragramming_Language_Suggester directory
+* Use your terminal to "git clone" from https://github.com/StollerSystem/Mr._Robogers_Neighborhood
+* Navigate to the Mr._Robogers_Neighborhood directory
 * If using VSCode use command "code ." to open the folder otherwise open the whole folder in your text editor
 * Feel free to mess around with the index.html, styles.css, and scripts.js files! 
 
