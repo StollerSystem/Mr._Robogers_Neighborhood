@@ -1,4 +1,5 @@
 // Business Logic
+
 function returnRange(input){
   let range = [];
   number = 0;
@@ -69,12 +70,16 @@ function changeFour(range) {
     let hasFour = false 
     let destroy = false   
     for (const digit of number.toString()) {
-      if (digit === "4") {        
+      if (digit % 9 === 7) {
+        destroy = true
+      } else if (digit === "4") {        
         hasFour = true                    
       }
     }
     if (hasFour) {
       newRange.push("BLEEEEEP!")
+    } else if (destroy) {
+      newRange.push("DESTROY ALL HUMANS!")
     } else {
       newRange.push(number)
     }
@@ -83,6 +88,7 @@ function changeFour(range) {
 }
 
 // Interface Logic 
+
 $(document).ready(function() {  
   $("#mainForm").submit(function(event) {
     event.preventDefault(event);
