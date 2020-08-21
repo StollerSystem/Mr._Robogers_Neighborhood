@@ -4,13 +4,12 @@ function returnRange(input){
   number = 0;
   while (number <= input){
     range.push(number)
-    number += 1
-    
+    number += 1    
   }
-  return changeThree(range)
+  return range
 }
 
-function changeThree(range) {  
+function changeThree(range) {    
   newRange = []
   range.forEach(function(number) {
     let hasThree = false    
@@ -28,7 +27,7 @@ function changeThree(range) {
   return changeTwo(newRange)
 }
 
-function changeTwo(range) {  
+function changeTwo(range) {   
   newRange = []
   range.forEach(function(number) {
     let hasTwo = false    
@@ -46,7 +45,7 @@ function changeTwo(range) {
   return changeOne(newRange)
 }
 
-function changeOne(range) {  
+function changeOne(range) {    
   newRange = []
   range.forEach(function(number) {
     let hasOne = false    
@@ -64,10 +63,11 @@ function changeOne(range) {
   return newRange
 }
 
-function changeFour(range) {  
+function changeFour(range) {    
   newRange = []
   range.forEach(function(number) {
-    let hasFour = false    
+    let hasFour = false 
+    let destroy = false   
     for (const digit of number.toString()) {
       if (digit === "4") {        
         hasFour = true                    
@@ -102,11 +102,9 @@ $(document).ready(function() {
           if ($(this).val() === "1") {
             reverse = true;         
           } else if ($(this).val() === "2") {
-            bleeper = true; 
-              
+            bleeper = true;               
           } 
-        });
-        //console.log(bleeper)    
+        });           
         main(userInput,reverse,bleeper);  
      }    
   });
@@ -118,14 +116,6 @@ $(document).ready(function() {
     } else {
       finalRange = changeThree(mainRange)
     }
-
-
-
-    //let mainRange = changeThree(returnRange(input))    
-    //console.log(reverse)
-
-
-
     if (reverse) {
       finalRange.reverse();
     }
