@@ -6,3 +6,6 @@ body {
 .btn {
   background-color: chartreuse;
 }
+#tryAgain {
+  display: none;
+}

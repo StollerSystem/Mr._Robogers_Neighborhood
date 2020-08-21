@@ -85,10 +85,19 @@ function changeOne(range) {
 // Interface Logic 
 $(document).ready(function() {  
   $("#mainForm").submit(function(event) {
+    $("#send").hide();
+    $("#tryAgain").show();
     event.preventDefault(event);
     let userInput = $("#input").val();
     console.log(userInput)
     console.log(changeThree(returnRange(userInput)))
     $("#output").text(changeThree(returnRange(userInput)).join(" "))
+  });
+
+  $("#tryAgain").click(function() {
+    $("mainForm").trigger("reset")
+    $("#output").text("");
+    $("#tryAgain").hide();
+    $("#send").show();
   });
 });
