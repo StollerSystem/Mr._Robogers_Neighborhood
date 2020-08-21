@@ -7,13 +7,14 @@ function returnRange(input){
     number += 1
     
   }
-  return range
+  return changeThree(range)
 }
 
 function numberCheck(input){
   //console.log(Number.isNaN(parseInt(input)))
   if (input.split(" ").length > 1) {
     alert("PLease enter a SINGLE number")
+    //$("#output").text("PLease enter a SINGLE number")
    } else if (Number.isNaN(parseInt(input))) {
      alert("Please enter a NUMBER!")
    } else {
@@ -91,7 +92,8 @@ $(document).ready(function() {
     let userInput = $("#input").val();
     //console.log(userInput)
     //console.log(changeThree(returnRange(userInput)))
-    $("#output").text(changeThree(numberCheck(userInput)).join(" "))
+    $("#output").append('"'+changeThree(numberCheck(userInput)).join(" ")+'"')
+    //display(numberCheck(userInput).join(" "));
     $("#display").show();
   });
 
@@ -102,4 +104,17 @@ $(document).ready(function() {
     $("#mainForm")[0].reset();
     $("#display").hide();
   });
+
+  
 });
+
+// function display(input) {
+//   $("#output").text(input)
+// }
+
+
+
+
+
+
+
