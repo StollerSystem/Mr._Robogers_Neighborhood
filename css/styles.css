@@ -66,6 +66,8 @@ h1 {
  }
 
  #options {
+   margin: auto;
+   margin-top: 10px;
    text-align: center;
  }
 

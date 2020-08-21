@@ -38,7 +38,7 @@ function changeTwo(range) {
       }
     }
     if (hasThree) {
-      newRange.push("Boop")
+      newRange.push("Boop!")
     } else {
       newRange.push(number)
     }
@@ -56,7 +56,7 @@ function changeOne(range) {
       }
     }
     if (hasThree) {
-      newRange.push("Beep")
+      newRange.push("Beep!")
     } else {
       newRange.push(number)
     }
@@ -70,6 +70,7 @@ $(document).ready(function() {
     event.preventDefault(event);
     let userInput = $("#input").val();
     let reverse = false 
+    let bleeper = false
     if (userInput.split(" ").length > 1) {
       alert("ERROR! PLease enter a SINGLE number")    
      } else if (Number.isNaN(parseInt(userInput))) {
@@ -82,8 +83,12 @@ $(document).ready(function() {
         $("input:checkbox[name=options]:checked").each(function() {
           if ($(this).val() === "1") {
             reverse = true;         
-          }
-        });    
+          } else if ($(this).val() === "2") {
+            bleeper = true; 
+              
+          } 
+        });
+        console.log(bleeper)    
         main(userInput,reverse);  
      }    
   });
