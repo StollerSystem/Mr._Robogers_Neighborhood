@@ -80,11 +80,26 @@ $(document).ready(function() {
     $("#send").hide();
     $("#tryAgain").show(1000);
     event.preventDefault(event);
-    let userInput = $("#input").val();    
-    $("#output").append('"'+changeThree(numberCheck(userInput)).join(" ")+'"')    
+    let userInput = $("#input").val();
+    main(userInput);   
+    //$("#output").append('"'+changeThree(numberCheck(userInput)).join(" ")+'"')    
     $("#display").show(2000,"swing");
     $("#inputZone").hide();
+    $("input:checkbox[name=options]:checked").each(function() {
+      console.log($(this).val())
+    });
   });
+
+  function main(input) {
+    let mainRange = changeThree(numberCheck(input))
+    //console.log($("input:checkbox[name=reverse]:checked").val())
+
+
+
+    $("#output").append('"'+mainRange.join(" ")+'"')
+  }
+
+
 
   $("#tryAgain").click(function() {
     $("#output").text("")

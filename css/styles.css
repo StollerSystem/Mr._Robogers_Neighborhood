@@ -64,6 +64,10 @@ h1 {
    margin-top: 20px;   
  }
 
+ #options {
+   text-align: center;
+ }
+
 .btn {  
   width: 15%;
   background-color: rgb(0, 0, 0);
