@@ -95,9 +95,9 @@ $(document).ready(function() {
   });
 
   $("#tryAgain").click(function() {
-    $("mainForm").trigger("reset")
-    $("#output").text("");
+    $("#output").text("")
     $("#tryAgain").hide();
     $("#send").show();
+    $("#mainForm")[0].reset();
   });
 });

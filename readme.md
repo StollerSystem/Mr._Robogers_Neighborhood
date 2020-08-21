@@ -32,7 +32,7 @@ This webpage will take input from teh user in the form of a number, then countin
     * Input: 32
     * "Won't you be my neighbor?"
 [X] User interface allows input to be typed in and submitted 
-[] The output is displayed 
+[X] The output is displayed 
 [] A user should be able to enter a new number and see new results over and over again
 
 ## Setup/Installation Requirements
