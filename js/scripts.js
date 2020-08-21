@@ -12,27 +12,21 @@ function returnRange(input){
 }
 
 function numberCheck(input){
-  // if (input.split(" ").includes(/\d/g)) {
-  //   console.log("IS NUMBERS!");
-  // } else {
-  //   console.log("NOT NUMBERS!");
-  // }
-
+  //console.log(Number.isNaN(parseInt(input)))
   if (input.split(" ").length > 1) {
     alert("PLease enter a SINGLE number")
-   } else if (parseInt(input) === NaN) {
+   } else if (Number.isNaN(parseInt(input))) {
      alert("Please enter a NUMBER!")
    } else {
      console.log("ALL GOOD")
+     return parseInt(input)
    }
-
-
 }
 
 
 
 //console.log(parseInt("test"))
-console.log(numberCheck("fuck"))
+console.log(numberCheck("20"))
 console.log(returnRange(20))
 
 
