@@ -89,9 +89,10 @@ $(document).ready(function() {
     $("#tryAgain").show();
     event.preventDefault(event);
     let userInput = $("#input").val();
-    console.log(userInput)
-    console.log(changeThree(returnRange(userInput)))
-    $("#output").text(changeThree(returnRange(userInput)).join(" "))
+    //console.log(userInput)
+    //console.log(changeThree(returnRange(userInput)))
+    $("#output").text(changeThree(numberCheck(userInput)).join(" "))
+    $("#display").show();
   });
 
   $("#tryAgain").click(function() {
@@ -99,5 +100,6 @@ $(document).ready(function() {
     $("#tryAgain").hide();
     $("#send").show();
     $("#mainForm")[0].reset();
+    $("#display").hide();
   });
 });
