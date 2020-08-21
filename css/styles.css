@@ -49,9 +49,19 @@ h1 {
   margin: auto;
   width:60%;
 }
+ .btns {   
+   text-align: center;
+   margin: 20px;
+   width: auto;
+   margin-top: 20px;
+   
+ }
 
 
 .btn {
+  /* text-align: center; */
+  /* margin: auto; */
+  width: 15%;
   background-color: chartreuse;
 }
 #tryAgain {

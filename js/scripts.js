@@ -95,6 +95,7 @@ $(document).ready(function() {
     $("#output").append('"'+changeThree(numberCheck(userInput)).join(" ")+'"')
     //display(numberCheck(userInput).join(" "));
     $("#display").show();
+    $("#inputZone").hide();
   });
 
   $("#tryAgain").click(function() {
@@ -103,6 +104,7 @@ $(document).ready(function() {
     $("#send").show();
     $("#mainForm")[0].reset();
     $("#display").hide();
+    $("#inputZone").show();
   });
 
   
