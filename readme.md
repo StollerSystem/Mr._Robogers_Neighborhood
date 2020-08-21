@@ -44,7 +44,7 @@ This webpage will take input from teh user in the form of a number, then countin
 
 * [X] A user should be able to enter a new number and see new results over and over again
 
-* [] Add an option reverse the output
+* [] Add an option reverse the outputt
 
 ## Setup/Installation Requirements
 

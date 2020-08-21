@@ -77,40 +77,38 @@ function changeOne(range) {
 // Interface Logic 
 $(document).ready(function() {  
   $("#mainForm").submit(function(event) {
-    $("#send").hide();
-    $("#tryAgain").show(1000);
     event.preventDefault(event);
     let userInput = $("#input").val();
-       
-    //$("#output").append('"'+changeThree(numberCheck(userInput)).join(" ")+'"')    
-    $("#display").show(2000,"swing");
-    $("#inputZone").hide();
-    let reverse = false
-    //console.log(reverse)
-    $("input:checkbox[name=options]:checked").each(function() {
-      if ($(this).val() === "1") {
-        reverse = true; 
-        //console.log(reverse)
-      }
-    });
-    //console.log(reverse)
-    main(userInput,reverse);
+    let reverse = false 
+    if (userInput.split(" ").length > 1) {
+      alert("PLease enter a SINGLE number")    
+     } else if (Number.isNaN(parseInt(userInput))) {
+       alert("Please enter a NUMBER!")
+     } else {
+        $("#send").hide();
+        $("#tryAgain").show(4000);
+                
+        $("#display").show(2000,"swing");
+        $("#inputZone").hide();       
+        $("input:checkbox[name=options]:checked").each(function() {
+          if ($(this).val() === "1") {
+            reverse = true;         
+          }
+        });    
+        main(userInput,reverse);  
+     }    
   });
 
+
+
   function main(input,reverse) {
-    let mainRange = changeThree(numberCheck(input))
-    //console.log($("input:checkbox[name=reverse]:checked").val())
+    let mainRange = changeThree(returnRange(input))    
     console.log(reverse)
     if (reverse) {
       mainRange.reverse();
     }
-
-
-
     $("#output").append('"'+mainRange.join(" ")+'"')
   }
-
-
 
   $("#tryAgain").click(function() {
     $("#output").text("")
