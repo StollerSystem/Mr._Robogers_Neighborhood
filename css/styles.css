@@ -1,7 +1,38 @@
 body {
   background-color: black;
-  color: white;
+  color: white;  
+  background-size: cover;
+
 }
+h1 {
+  text-align: center;
+  border-width: 5px;
+  border-radius: 5px;
+  border: solid white;
+  border-style: double;
+  font-size: 50px;
+  margin: auto;
+  margin-top: 10px;
+}
+.box p{
+  text-align: center;
+  font-size: 25px;
+}
+#mainForm label {
+  float: right;
+}
+.form-control {
+  width: 20%;
+}
+
+#display p {
+  font-size: xx-large;
+  border-width: 5px;
+  border-radius: 5px;
+  border: solid white;
+  border-style: double;
+}
+
 
 .btn {
   background-color: chartreuse;
