@@ -30,7 +30,7 @@ function changeThree(range) {
       }
     }
     if (hasThree) {
-      newRange.push("won't you be my neighbor?")
+      newRange.push("Won't you be my neighbor?")
     } else {
       newRange.push(number)
     }
@@ -81,18 +81,29 @@ $(document).ready(function() {
     $("#tryAgain").show(1000);
     event.preventDefault(event);
     let userInput = $("#input").val();
-    main(userInput);   
+       
     //$("#output").append('"'+changeThree(numberCheck(userInput)).join(" ")+'"')    
     $("#display").show(2000,"swing");
     $("#inputZone").hide();
+    let reverse = false
+    //console.log(reverse)
     $("input:checkbox[name=options]:checked").each(function() {
-      console.log($(this).val())
+      if ($(this).val() === "1") {
+        reverse = true; 
+        //console.log(reverse)
+      }
     });
+    //console.log(reverse)
+    main(userInput,reverse);
   });
 
-  function main(input) {
+  function main(input,reverse) {
     let mainRange = changeThree(numberCheck(input))
     //console.log($("input:checkbox[name=reverse]:checked").val())
+    console.log(reverse)
+    if (reverse) {
+      mainRange.reverse();
+    }
 
 
 
