@@ -89,6 +89,6 @@ $(document).ready(function() {
     let userInput = $("#input").val();
     console.log(userInput)
     console.log(changeThree(returnRange(userInput)))
-    $("#output").text(changeThree(returnRange(userInput)))
+    $("#output").text(changeThree(returnRange(userInput)).join(" "))
   });
 });
