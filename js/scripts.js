@@ -10,15 +10,12 @@ function returnRange(input){
   return changeThree(range)
 }
 
-function numberCheck(input){
-  //console.log(Number.isNaN(parseInt(input)))
+function numberCheck(input){  
   if (input.split(" ").length > 1) {
-    alert("PLease enter a SINGLE number")
-    //$("#output").text("PLease enter a SINGLE number")
+    alert("PLease enter a SINGLE number")    
    } else if (Number.isNaN(parseInt(input))) {
      alert("Please enter a NUMBER!")
-   } else {
-     console.log("ALL GOOD")
+   } else {     
      return returnRange(input)
    }
 }
@@ -28,13 +25,12 @@ function changeThree(range) {
   range.forEach(function(number) {
     let hasThree = false    
     for (const digit of number.toString()) {
-      if (digit === "3") {
-        //console.log("THREE!")
+      if (digit === "3") {        
         hasThree = true                    
       }
     }
     if (hasThree) {
-      newRange.push("Won't you be my neighbor?")
+      newRange.push("won't you be my neighbor?")
     } else {
       newRange.push(number)
     }
@@ -47,8 +43,7 @@ function changeTwo(range) {
   range.forEach(function(number) {
     let hasThree = false    
     for (const digit of number.toString()) {
-      if (digit === "2") {
-        //console.log("TWO!")
+      if (digit === "2") {        
         hasThree = true                    
       }
     }
@@ -66,8 +61,7 @@ function changeOne(range) {
   range.forEach(function(number) {
     let hasThree = false    
     for (const digit of number.toString()) {
-      if (digit === "1") {
-        //console.log("ONE!")
+      if (digit === "1") {        
         hasThree = true                    
       }
     }
@@ -79,40 +73,30 @@ function changeOne(range) {
   });
   return newRange
 }
-//console.log(parseInt("test"))
-//console.log(numberCheck("20"))
-//console.log(changeThree(returnRange("23")))
 
 // Interface Logic 
 $(document).ready(function() {  
   $("#mainForm").submit(function(event) {
     $("#send").hide();
-    $("#tryAgain").show();
+    $("#tryAgain").show(1000);
     event.preventDefault(event);
-    let userInput = $("#input").val();
-    //console.log(userInput)
-    //console.log(changeThree(returnRange(userInput)))
-    $("#output").append('"'+changeThree(numberCheck(userInput)).join(" ")+'"')
-    //display(numberCheck(userInput).join(" "));
-    $("#display").show();
+    let userInput = $("#input").val();    
+    $("#output").append('"'+changeThree(numberCheck(userInput)).join(" ")+'"')    
+    $("#display").show(2000,"swing");
     $("#inputZone").hide();
   });
 
   $("#tryAgain").click(function() {
     $("#output").text("")
-    $("#tryAgain").hide();
-    $("#send").show();
+    $("#tryAgain").hide(100);
+    $("#send").show(100);
     $("#mainForm")[0].reset();
-    $("#display").hide();
-    $("#inputZone").show();
-  });
-
-  
+    $("#display").hide(100);
+    $("#inputZone").show(100);
+  });  
 });
 
-// function display(input) {
-//   $("#output").text(input)
-// }
+
 
 
 
