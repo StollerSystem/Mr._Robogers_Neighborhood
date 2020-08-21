@@ -19,15 +19,35 @@ function numberCheck(input){
      alert("Please enter a NUMBER!")
    } else {
      console.log("ALL GOOD")
-     return parseInt(input)
+     return returnRange(input)
    }
+}
+
+function threeToText(range) {  
+  newRange = []
+  range.forEach(function(number) {
+    let hasThree = false    
+    for (const digit of number.toString()) {
+      if (digit === "3") {
+        console.log("THREE!")
+        hasThree = true
+        //newRange.push("Won't you be my neighbor?")             
+      }
+    }
+    if (hasThree) {
+      newRange.push("Won't you be my neighbor?")
+    } else {
+      newRange.push(number)
+    }
+  });
+  return newRange
 }
 
 
 
 //console.log(parseInt("test"))
 console.log(numberCheck("20"))
-console.log(returnRange(20))
+console.log(threeToText(returnRange("23")))
 
 
 
