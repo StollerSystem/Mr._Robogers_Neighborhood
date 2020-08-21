@@ -13,7 +13,7 @@ https://StollerSystem.github.io/Mr.-Roboger-s-Neighborhood
 This webpage will take input from teh user in the form of a number, then counting from 0 up to the inputted number will create a sentence of words based on all the numbers counting up. 
 
 ## Specs
-[] The program will return a range of numbers from 0 to the number input by the user
+[X] The program will return a range of numbers from 0 to the number input by the user
     * Input: "5"
     * Output "0, 1, 2, 3, 4, 5"
 [] For each number element in the range, if it contains a 3 then replace all digits with "Won't you be my neighbor?"
