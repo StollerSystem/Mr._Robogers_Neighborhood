@@ -1,6 +1,6 @@
 # Mr. Roboger's Neighborhood
 
-#### A website will talk like a Robot! Built 08/14/2020
+#### A website that will talk like a Robot! Built 08/14/2020
 
 #### By Ben Stoller
 
@@ -10,7 +10,7 @@ https://StollerSystem.github.io/Mr._Robogers_Neighborhood
 
 ## Description
 
-This webpage will take input from teh user in the form of a number, then counting from 0 up to the inputted number will create a sentence of words based on all the numbers counting up. 
+This webpage will take input from the user in the form of a single number, however large. Then counting from 0 up to the inputted number the page will create a sentence of words based on all the numbers in the range counting up. See what silly things the robot says! Careful, don't make him mad!
 
 ## Specs
 * [X] The program will return a range of numbers from 0 to the number input by the user
