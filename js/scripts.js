@@ -23,19 +23,56 @@ function numberCheck(input){
    }
 }
 
-function threeToText(range) {  
+function changeThree(range) {  
   newRange = []
   range.forEach(function(number) {
     let hasThree = false    
     for (const digit of number.toString()) {
       if (digit === "3") {
         console.log("THREE!")
-        hasThree = true
-        //newRange.push("Won't you be my neighbor?")             
+        hasThree = true                    
       }
     }
     if (hasThree) {
       newRange.push("Won't you be my neighbor?")
+    } else {
+      newRange.push(number)
+    }
+  });
+  return changeTwo(newRange)
+}
+
+function changeTwo(range) {  
+  newRange = []
+  range.forEach(function(number) {
+    let hasThree = false    
+    for (const digit of number.toString()) {
+      if (digit === "2") {
+        console.log("TWO!")
+        hasThree = true                    
+      }
+    }
+    if (hasThree) {
+      newRange.push("Boop")
+    } else {
+      newRange.push(number)
+    }
+  });
+  return changeOne(newRange)
+}
+
+function changeOne(range) {  
+  newRange = []
+  range.forEach(function(number) {
+    let hasThree = false    
+    for (const digit of number.toString()) {
+      if (digit === "1") {
+        console.log("ONE!")
+        hasThree = true                    
+      }
+    }
+    if (hasThree) {
+      newRange.push("Beep")
     } else {
       newRange.push(number)
     }
@@ -45,9 +82,15 @@ function threeToText(range) {
 
 
 
+
+
+
+
+
+
 //console.log(parseInt("test"))
 console.log(numberCheck("20"))
-console.log(threeToText(returnRange("23")))
+console.log(changeThree(returnRange("23")))
 
 
 
